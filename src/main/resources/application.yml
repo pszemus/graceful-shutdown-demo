@@ -1,0 +1,11 @@
+server:
+    shutdown: graceful
+spring:
+    lifecycle:
+        timeout-per-shutdown-phase: 8s
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: beans,configprops,health,env,info,loggers,metrics,scheduledtasks,httptrace,mappings,refresh
